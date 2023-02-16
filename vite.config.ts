@@ -64,7 +64,7 @@ export default defineConfig(({ command, mode }) => {
         template: '/index.html',
         inject: {
           data: {
-            title: '水利消费系统-new'
+            title: 'xxx-new'
           },
         },
       }),
