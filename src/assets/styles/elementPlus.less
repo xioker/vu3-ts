@@ -1,0 +1,84 @@
+@import './elementPlus.less';
+// elementplus的样式重置 设置文件
+// 设置侧边栏的样式
+.el-container{
+  height: 100vh;
+}
+#app{
+  .el-aside {
+    background-color: #304156;
+    .el-menu{
+      border-right:none;
+      width: 100% !important;
+      height: 100%;
+      .el-sub-menu{
+        &:hover {
+          background-color: red;
+        }
+        .el-sub-menu__title{
+          background-color: #304156 !important;
+        }
+      }
+    }
+  }
+  .main-container {
+    min-height: 100%;
+    transition: margin-left .28s;
+    margin-left: 200px;
+    position: relative;
+  }
+  // 布局头部线 阴影
+  .el-header{
+    box-shadow: 2px 2px 5px #ccc;
+    z-index: 99;
+  }
+  // 去掉弹出框头部 右间距
+  .el-dialog__header{
+    border-bottom: 1px solid #ebebeb;
+    margin-right: 0;
+    font-weight: 600;
+  }
+  // 表格头加粗
+  .el-form-item__label,.el-table__header .cell{
+    font-weight: 700;
+    color:#606266
+  }
+  // 设置时间框大小
+  .el-main .el-form-item__content .el-date-editor{
+    width: 210px
+  }
+  // 设置按钮文字颜色
+  .el-button{
+    color:#fff
+  }
+  // 设置表单间隔大小
+  .el-form--inline .el-form-item{
+    margin-right: 12px;
+  }
+  // 菜单栏动画效果
+  .horizontal-collapse-transition { 
+    transition: 0s width ease, 0s padding-left ease, 0s padding-right ease;
+  }
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 200px;
+    min-height: 400px;
+  }
+  // 操作样式调整
+  .el-link{
+    margin: 0 5px;
+  }
+} 
+
+// 设置侧边菜单栏高度
+#app .has-logo .el-scrollbar{
+  height: calc(100% - 60px);
+}
+// 设置header背景色
+.el-header, .el-footer {
+  background-color: #fff;
+}
+.el-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
